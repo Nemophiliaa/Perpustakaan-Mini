@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Perpustakaan</title>
+</head>
+<body class="bg-slate-100 font-[poppins]">
+    <main>
+        <!-- Book Form Wrapper Start -->
+         <div class="p-5 grid">
+            <!-- Book Form Start -->
+             <div class="shadow-md rounded-xl overflow-hidden lg:max-w-3xl lg:mx-auto lg:w-[90%] bg-slate-50 ">
+                <!-- Form Input Start -->
+                <section>
+                    <header class="flex justify-start items-center bg-blue-500 text-slate-100 p-5">
+                        <h1 class="font-bold text-2xl">📚 Perpustakaan Mini</h1>
+                    </header>
+                    <div class="p-5 border-b border-slate-300">
+                        <form action="" method="POST" required>
+                            <!-- Input Wrapper Start -->
+                            <div class="space-y-5">
+                                <div>
+                                    <label for="judul" class="font-medium text-lg block mb-1.5"> Judul : </label>
+                                    <input type="text" class="border py-2 px-5 w-full text-gray-500 rounded-lg focus:outline-none focus:border-blue-500 focus:border-2" id="judul" placeholder="Masukan judul Buku" required>
+                                </div>
+                                <!-- Group 1 Start -->
+                                <div class="grid md:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="penulis" class="font-medium text-lg block mb-1.5"> Penulis : </label>
+                                        <input type="text" class="border py-2 px-5 w-full text-gray-500 rounded-lg focus:outline-none focus:border-blue-500 focus:border-2" id="penulis" placeholder="Nama Penulis" required>
+                                    </div>
+    
+                                    <div>
+                                        <label for="tahun" class="font-medium text-lg block mb-1.5"> Tahun : </label>
+                                        <input type="number" class="appearance-none border py-2 px-5 w-full text-gray-500 rounded-lg focus:outline-none focus:border-blue-500 focus:border-2" step="100" id="tahun" placeholder="2024" required>
+                                    </div>
+                                </div>
+                                <!-- Group 1 End -->
+                                <div>
+                                    <label for="kategori" class="font-medium text-lg block mb-1.5"> Kategori : </label>
+                                    <input type="text" class="border py-2 px-5 w-full text-gray-500 rounded-lg focus:outline-none focus:border-blue-500 focus:border-2" id="kategori" placeholder="Fiksi , Non - Fiksi" required>
+                                </div>
+                                <!-- Button Start -->
+                                <div class="grid gap-5" id="buttonWrapper">
+                                    <button type="button" id="buttonSubmit" class="cursor-pointer  border-none outline-none bg-blue-500 font-medium text-slate-100 py-2 px-5 rounded-lg hover:scale-105 hover:bg-blue-900 duration-300 transition-all shadow-inner">Tambah Buku</button>
+                                </div>
+                                <!-- Button End -->
+                            </div>
+                            <!-- Input Wrapper End -->
+                        </form>
+                    </div>
+                </section>
+                <!-- Form Input End -->
+
+                <!-- Book Storage Start -->
+                <section>
+                    <div class="px-5 py-10">
+                        <header class="flex justify-between items-center">
+                            <h1 class="text-xl font-medium ">📕 Daftar Buku : </h1>
+
+                            <div class="px-5 py-2 rounded-2xl bg-blue-500/20">
+                                <p id="bookCounter" class="text-blue-950 font-medium"></p>
+                            </div>
+                        </header>
+            
+                        <div id="bookStorage" class="py-10 grid gap-6 xl:grid-cols-2 relative">
+                           <!-- Book -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Book Storage End -->
+             </div>
+            <!-- Book Form End -->
+         </div>
+        <!-- Book Wrapper End -->
+    </main>
+    <script src="scripts.js">
+    </script>
+</body>
+</html>
